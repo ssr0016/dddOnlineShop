@@ -43,7 +43,7 @@ var Cfg Config
 func LoadConfig(filename string) (err error) {
 	configByte, err := os.ReadFile(filename)
 	if err != nil {
-		return
+		return err
 	}
 
 	return yaml.Unmarshal(configByte, &Cfg)

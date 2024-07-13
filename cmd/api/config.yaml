@@ -1,0 +1,18 @@
+app:
+  name: mini-online-shop
+  port: ":4000"
+  encryption:
+    salt: 10
+    jwt: thisIsASecretToken
+
+db:
+  host: localhost
+  port: 5432
+  name: postgres
+  user: postgres
+  password: secret
+  connection_pool:
+    max_idle_connection: 10
+    max_open_connection: 30
+    max_life_time_connection: 60 #second
+    max_idle_time_connection: 60 #second
